@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a name="readme-top"></a>
 
 <!--
@@ -30,6 +31,8 @@ After you're finished please remove all the comments and instructions!
   <h3><b>Microverse README Template</b></h3>
 
 </div>
+=======
+>>>>>>> Add-HTML-Components
 
 <!-- TABLE OF CONTENTS -->
 
@@ -57,18 +60,29 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
+<<<<<<< HEAD
 # 📖 [your_project_name] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
 **[your_project__name]** is a...
+=======
+# 📖 Math Magicians <a name="about-project"></a>
+
+
+**BookStore CMS** is a website for all people loves books. It is a Single Page App (SPA) that allows users to: Create,Update,Delete and see list of books
+
+>>>>>>> Add-HTML-Components
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
+<<<<<<< HEAD
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
+=======
+>>>>>>> Add-HTML-Components
 <details>
   <summary>Client</summary>
   <ul>
@@ -79,14 +93,20 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Server</summary>
   <ul>
+<<<<<<< HEAD
     <li><a href="https://expressjs.com/">Express.js</a></li>
+=======
+>>>>>>> Add-HTML-Components
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
+<<<<<<< HEAD
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+=======
+>>>>>>> Add-HTML-Components
   </ul>
 </details>
 
@@ -94,11 +114,16 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
+<<<<<<< HEAD
 > Describe between 1-3 key features of the application.
 
 - **[key_feature_1]**
 - **[key_feature_2]**
 - **[key_feature_3]**
+=======
+
+**Single-Page-Application**
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,8 +131,11 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+<<<<<<< HEAD
 > Add a link to your deployed project.
 
+=======
+>>>>>>> Add-HTML-Components
 - [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -116,14 +144,18 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
+<<<<<<< HEAD
 > Describe how a new developer could make use of your project.
 
+=======
+>>>>>>> Add-HTML-Components
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
+<<<<<<< HEAD
 <!--
 Example command:
 
@@ -131,11 +163,16 @@ Example command:
  gem install rails
 ```
  -->
+=======
+- [Node](https://nodejs.org/en/) installed in your computer 
+- [Git](https://git-scm.com/) installed in your computer 
+>>>>>>> Add-HTML-Components
 
 ### Setup
 
 Clone this repository to your desired folder:
 
+<<<<<<< HEAD
 <!--
 Example commands:
 
@@ -144,11 +181,19 @@ Example commands:
   git clone git@github.com:myaccount/my-project.git
 ```
 --->
+=======
+```sh
+  cd my-folder
+  git clone git@github.com:abdallahmalima/Math-Magician.git
+```
+
+>>>>>>> Add-HTML-Components
 
 ### Install
 
 Install this project with:
 
+<<<<<<< HEAD
 <!--
 Example command:
 
@@ -157,11 +202,19 @@ Example command:
   gem install
 ```
 --->
+=======
+```sh
+  cd my-project
+  npm install
+```
+
+>>>>>>> Add-HTML-Components
 
 ### Usage
 
 To run the project, execute the following command:
 
+<<<<<<< HEAD
 <!--
 Example command:
 
@@ -169,11 +222,19 @@ Example command:
   rails server
 ```
 --->
+=======
+
+```sh
+  npm start
+```
+
+>>>>>>> Add-HTML-Components
 
 ### Run tests
 
 To run tests, run the following command:
 
+<<<<<<< HEAD
 <!--
 Example command:
 
@@ -181,11 +242,19 @@ Example command:
   bin/rails test test/models/article_test.rb
 ```
 --->
+=======
+
+```sh
+  npm test
+```
+
+>>>>>>> Add-HTML-Components
 
 ### Deployment
 
 You can deploy this project using:
 
+<<<<<<< HEAD
 <!--
 Example:
 
@@ -193,6 +262,14 @@ Example:
 
 ```
  -->
+=======
+
+
+```sh
+    npm build
+```
+
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,6 +277,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
+<<<<<<< HEAD
 > Mention all of the collaborators of this project.
 
 👤 **Author1**
@@ -213,6 +291,15 @@ Example:
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+=======
+
+👤 **Abdallah Antony**
+
+- GitHub: [@githubhandle](https://github.com/abdallahmalima)
+- Twitter: [@twitterhandle](https://twitter.com/Softmal1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdallah-malima-antony/)
+
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -222,9 +309,15 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
+<<<<<<< HEAD
 - [ ] **[new_feature_1]**
 - [ ] **[new_feature_2]**
 - [ ] **[new_feature_3]**
+=======
+- [ ] **Add Styling to all Pages**
+- [ ] **Add redux to manage states**
+- [ ] **Make it full funtional with API datas**
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,7 +327,11 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
+<<<<<<< HEAD
 Feel free to check the [issues page](../../issues/).
+=======
+Feel free to check the [issues page](https://github.com/abdallahmalima/Math-Magician/issues).
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,9 +339,13 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
+<<<<<<< HEAD
 > Write a message to encourage readers to support your project
 
 If you like this project...
+=======
+Give a ⭐️ if you like this project!
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -252,9 +353,15 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+<<<<<<< HEAD
 > Give credit to everyone who inspired your codebase.
 
 I would like to thank...
+=======
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Code Reviewer(s) for the insightful feedback.
+- Hat tip to anyone whose code was used.
+>>>>>>> Add-HTML-Components
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -282,4 +389,8 @@ This project is [MIT](./LICENSE) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
+<<<<<<< HEAD
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+=======
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+>>>>>>> Add-HTML-Components
