@@ -6,7 +6,7 @@ const NavBar = () => (
          <div className='leftNavItems'>
           <h1>Bookstore CMS</h1>
          <ul className='nav-links'>
-          <li> <Link className='NavLink' to='/books'>BOOKS</Link></li>
+          <li> <Link className='NavLink' to='/'>BOOKS</Link></li>
           <li> <Link className='NavLink' to='/categories'>CATEGORIES</Link></li>
          </ul>
          </div>

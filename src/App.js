@@ -8,7 +8,6 @@ const App = () => (
      <NavBar/>
      <Routes>
        <Route path="/" element={<BookPage/>}/>
-       <Route path="/books" element={<BookPage/>}/>
        <Route path="/categories" element={<CategoryPage/>}/>
      </Routes>
   </div>
