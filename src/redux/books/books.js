@@ -2,7 +2,7 @@ const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 const idCounter = 0;
 
-const books = (state = [], action = {}) => {
+const reducer = (state = [], action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, { id: idCounter + 1, title: action.title }];
@@ -22,4 +22,4 @@ export const bookRemover = (id) => ({
   id,
 });
 
-export default books;
+export default reducer;
