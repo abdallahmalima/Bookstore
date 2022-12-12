@@ -1,5 +1,5 @@
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'book-store/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 const idCounter = 0;
 
 const books = (state = [], action = {}) => {
