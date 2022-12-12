@@ -1,6 +1,7 @@
-import { combineReducers } from 'redux'
-import { bookCreator } from './books/books'
-import { statusChecker } from './categories/categories'
+import { combineReducers } from 'redux';
+import books from './books/books';
+import categories from './categories/categories';
 
-export default configureStore=()=>combineReducers({bookCreator,statusChecker})
- 
+const configureStore = () => combineReducers({ books, categories });
+
+export default configureStore;
