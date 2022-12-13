@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { bookRemover } from '../redux/books/books';
 
-const Book = ({ title, author }) => (
-        <div className='book-wrapper'>
+const Book = ({ id, title, author }) => {
+  const dispatch = useDispatch();
+
+  const handleRemoveBook = () => {
+    dispatch(bookRemover(id));
+  };
+  return <div className='book-wrapper'>
              <div>
               <h4>Action</h4>
               <h2>{ title }</h2>
               <p>{ author }</p>
               <ul>
                 <li><button>Comments</button></li>
-                <li><button>Remove</button></li>
+                <li><button onClick={handleRemoveBook}>Remove</button></li>
                 <li><button>Edit</button></li>
               </ul>
               </div>
@@ -21,7 +27,7 @@ const Book = ({ title, author }) => (
               <p>Chapter 17</p>
               <button>UPDATE PROGRESS</button>
               </div>
-         </div>
-);
+         </div>;
+};
 
 export default Book;
