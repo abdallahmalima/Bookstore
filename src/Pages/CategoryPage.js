@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { statusChecker } from '../redux/categories/categories';
+import { checkStatus } from '../redux/categories/categoriesSlice';
 
 const CategoryPage = () => {
   const dispatch = useDispatch();
   const [isChecked, setIsChecked] = useState(false);
   const status = useSelector((state) => state.categories);
   const handleStatusCheck = () => {
-    dispatch(statusChecker());
+    dispatch(checkStatus());
     setIsChecked(true);
   };
 

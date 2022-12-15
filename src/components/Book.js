@@ -1,11 +1,11 @@
 import { useDispatch } from 'react-redux';
-import { bookRemover } from '../redux/books/books';
+import { deleteBook } from '../redux/books/booksThunk';
 
 const Book = ({ id, title, author }) => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
-    dispatch(bookRemover(id));
+    dispatch(deleteBook(id));
   };
   return <div className='book-wrapper'>
              <div>
