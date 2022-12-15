@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { bookCreator } from '../redux/books/books';
+import { createBook } from '../redux/books/booksThunk';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -15,7 +15,9 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(bookCreator({ id: uuidv4(), title, author }));
+    dispatch(createBook({
+      item_id: uuidv4(), title, author, category: 'Fiction',
+    }));
     resetForm();
   };
 
