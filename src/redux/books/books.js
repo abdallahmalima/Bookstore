@@ -1,5 +1,11 @@
 const BOOK_ADDED = 'book-store/books/BOOK_ADDED';
 const BOOK_REMOVED = 'book-store/books/BOOK_REMOVED';
+const BOOK_FETCHED = 'book-store/books/BOOK_FETCHED';
+
+export const bookFetcher = (books) => ({
+  type: BOOK_FETCHED,
+  payload: books,
+});
 
 export const bookCreator = (book) => ({
   type: BOOK_ADDED,
@@ -11,19 +17,15 @@ export const bookRemover = (id) => ({
   payload: id,
 });
 
-const initialState = [
-  { id: 1, title: 'The Hunger Games', author: 'Julius John' },
-  { id: 2, title: 'War and Peace', author: 'Abdallah Malima' },
-  { id: 3, title: 'The Adventures of Huckleberry Finn ', author: 'Irene Jackson' },
-  { id: 4, title: 'Hamlet', author: 'James Jackson' },
-  { id: 5, title: 'In Search of Lost Time', author: 'Ester Jackson' },
-];
+const initialState = [];
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case BOOK_FETCHED:
+      return action.payload;
     case BOOK_ADDED:
       return [...state, {
-        id: action.payload.id,
+        id: action.payload.item_id,
         title: action.payload.title,
         author: action.payload.author,
       },
