@@ -4,7 +4,7 @@ import BookPage from './Pages/BookPage';
 import CategoryPage from './Pages/CategoryPage';
 
 const App = () => (
-  <div className="App">
+  <div className="w-full h-full font-montserrat  bg-dirty-white">
      <NavBar/>
      <Routes>
        <Route path="/" element={<BookPage/>}/>

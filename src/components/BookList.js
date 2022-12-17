@@ -10,7 +10,7 @@ const BookList = () => {
     dispatch(fetchBooks());
   }, []);
 
-  return <div className='book-list'>
+  return <div className="flex flex-col gap-12 items-center w-fit m-auto md:w-full  md:flex-col justify-between py-8">
    {books.map((book) => (
       <Book key={book.id} {...book} />
    ))}
