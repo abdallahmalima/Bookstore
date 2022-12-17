@@ -28,6 +28,7 @@ body {
 
 .app-bg-primary {
   --tw-text-opacity: 1;
+
   background-color: rgb(2 144 255/var(--tw-text-opacity));
   color: #fff;
 }
