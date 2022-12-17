@@ -45,12 +45,10 @@ const Book = ({
 };
 
 Book.propTypes = {
-  book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-  }).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
