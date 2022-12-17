@@ -10,14 +10,17 @@ const BOOK_FETCHED = 'book-store/books/BOOK_FETCHED';
 export const fetchBooks = createAsyncThunk(BOOK_FETCHED, async () => {
   const res = await axios.get(`${BASE_URL}/Zrcj4JcfSXPrxnZ25MX7/books`);
   const books = Object.entries(res.data).map((arr) => {
-    const [id, [{ title, author }]] = arr;
-    return { id, title, author };
+    const [id, [{ title, author, category }]] = arr;
+    return {
+      id, title, author, category,
+    };
   });
   return books;
 });
 
-export const createBook = createAsyncThunk(BOOK_ADDED, async (book) => {
+export const createBook = createAsyncThunk(BOOK_ADDED, async (book, thunkAPI) => {
   const res = await axios.post(`${BASE_URL}/Zrcj4JcfSXPrxnZ25MX7/books`, book);
+  thunkAPI.dispatch(fetchBooks());
   return { data: res.data, book };
 });
 

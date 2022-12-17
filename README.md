@@ -157,9 +157,10 @@ You can deploy this project using:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **Add Styling to all Pages**
-- [ ] **Add redux to manage states**
-- [ ] **Make it full funtional with API datas**
+- [ ] **Add functionality for comments**
+- [ ] **Add functionality for update book**
+- [ ] **Add toaster message when create book**
+- [ ] **Add loading progress bar on fetching data from the server**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
