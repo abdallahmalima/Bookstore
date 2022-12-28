@@ -22,6 +22,7 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     dispatch(createBook({
       item_id: uuidv4(), title, author, category,
     }));
@@ -45,6 +46,7 @@ const BookForm = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Book Title"
+            required
           />
         </label>
         <label
@@ -58,6 +60,7 @@ const BookForm = () => {
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             placeholder="Book Author"
+            required
           />
         </label>
         <label
