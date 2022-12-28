@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { createBook } from '../redux/books/booksThunk';
 
@@ -9,10 +8,6 @@ const BookForm = () => {
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
-
-  const showToastr = (msg) => {
-    toast(msg);
-  };
 
   const resetForm = () => {
     setTitle('');
@@ -27,7 +22,6 @@ const BookForm = () => {
       item_id: uuidv4(), title, author, category,
     }));
     resetForm();
-    showToastr('The Book Added Successfully.');
   };
 
   return (

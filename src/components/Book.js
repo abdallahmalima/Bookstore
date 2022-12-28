@@ -21,7 +21,6 @@ const Book = ({
 
   const handleRemoveBook = () => {
     dispatch(deleteBook(id));
-    showToastr('The Book Removed Successfully.');
   };
   return (
   <div className="flex flex-col gap-12 items-center bg-white w-fit m-auto book-card  md:flex-row justify-between rounded-sm px-7 py-8 shadow-lg">
