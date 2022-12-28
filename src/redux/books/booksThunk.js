@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
@@ -18,14 +19,20 @@ export const fetchBooks = createAsyncThunk(BOOK_FETCHED, async () => {
   return books;
 });
 
+const showToastr = (msg) => {
+  toast(msg);
+};
+
 export const createBook = createAsyncThunk(BOOK_ADDED, async (book, thunkAPI) => {
   const res = await axios.post(`${BASE_URL}/Zrcj4JcfSXPrxnZ25MX7/books`, book);
+  showToastr('The Book Added Successfully.');
   thunkAPI.dispatch(fetchBooks());
   return { data: res.data, book };
 });
 
 export const deleteBook = createAsyncThunk(BOOK_REMOVED, async (id) => {
   const res = await axios.delete(`${BASE_URL}/Zrcj4JcfSXPrxnZ25MX7/books/${id}`);
+  showToastr('The Book Deleted Successfully.');
   const metaData = { book_id: id, res_text: res.data };
   return metaData;
 });
