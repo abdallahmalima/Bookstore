@@ -4,9 +4,7 @@ import { fetchBooks, createBook, deleteBook } from './booksThunk';
 const initialState = {
   books: [],
   loading: true,
-  error: '',
-  created: false,
-
+  error: null,
 };
 
 const booksSlice = createSlice({
@@ -14,9 +12,21 @@ const booksSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchBooks.fulfilled, (state, action) => {
-      state.books = action.payload;
+    builder.addCase(fetchBooks.pending, (state) => {
+      state.error = null;
+      state.loading = true;
     });
+    builder.addCase(fetchBooks.fulfilled, (state, action) => {
+      state.error = null;
+      state.books = action.payload;
+      state.loading = false;
+    });
+
+    builder.addCase(fetchBooks.rejected, (state, action) => {
+      state.error = action.error.message;
+      state.loading = false;
+    });
+
     builder.addCase(createBook.fulfilled, (state, action) => {
       const { book } = action.payload;
       state.books = [...state.books, {
@@ -25,6 +35,7 @@ const booksSlice = createSlice({
         author: book.author,
       }];
     });
+
     builder.addCase(deleteBook.fulfilled, (state, action) => {
       state.books = state.books.filter((book) => book.id !== action.payload.book_id);
     });

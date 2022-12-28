@@ -46,3 +46,16 @@ body {
   margin: auto;
   margin-bottom: 25px;
 }
+
+.textError {
+  color: brown;
+  width: 33%;
+  text-align: center;
+  margin: auto;
+  margin-top: 43px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 55px;
+  background-color: #fff;
+  padding: 29px;
+  font-size: larger;
+}
