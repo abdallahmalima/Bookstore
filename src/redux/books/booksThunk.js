@@ -9,7 +9,6 @@ const BOOK_FETCHED = 'book-store/books/BOOK_FETCHED';
 
 export const fetchBooks = createAsyncThunk(BOOK_FETCHED, async () => {
   const res = await axios.get(`${BASE_URL}/Zrcj4JcfSXPrxnZ25MX7/books`);
-  console.log('helllllo');
   const books = Object.entries(res.data).map((arr) => {
     const [id, [{ title, author, category }]] = arr;
     return {
