@@ -1,13 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import { createBook } from '../redux/books/booksThunk';
+import { resetDeletedError } from '../redux/books/booksSlice';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
+
+  const { deletedError } = useSelector((state) => state.books);
+
+  useEffect(() => {
+    if (deletedError) {
+      toast.error(deletedError);
+      dispatch(resetDeletedError());
+    }
+  }, [deletedError]);
 
   const resetForm = () => {
     setTitle('');

@@ -5,12 +5,17 @@ const initialState = {
   books: [],
   loading: true,
   error: null,
+  deletedError: null,
 };
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {},
+  reducers: {
+    resetDeletedError(state) {
+      state.deletedError = null;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchBooks.pending, (state) => {
       state.error = null;
@@ -36,11 +41,17 @@ const booksSlice = createSlice({
       }];
     });
 
+    builder.addCase(deleteBook.rejected, (state, action) => {
+      state.deletedError = action.error.message;
+    });
+
     builder.addCase(deleteBook.fulfilled, (state, action) => {
       state.books = state.books.filter((book) => book.id !== action.payload.book_id);
     });
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
+export const {
+  addBook, removeBook, resetDeletedError,
+} = booksSlice.actions;
 export default booksSlice.reducer;
