@@ -13,7 +13,7 @@ const BookList = () => {
   return <div className="flex flex-col gap-12 items-center w-fit m-auto md:w-full  md:flex-col justify-between py-8">
     {loading && <h3 className="textError">Loading...</h3>}
     {error && <h3 className="textError">{error}</h3>}
-    {books.map((book) => (
+    {!loading && !error && books.map((book) => (
       <Book key={book.id} {...book} />
     ))}
     </div>;
