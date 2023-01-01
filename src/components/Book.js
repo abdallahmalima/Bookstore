@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { deleteBook } from '../redux/books/booksThunk';
 import BookProgress from './bookprogress';
@@ -14,10 +13,6 @@ const Book = ({
   const currentChapter = maxChapter * randomProgress;
   const chapter = Math.floor(currentChapter);
   const percent = Math.floor(100 * randomProgress);
-
-  const showToastr = (msg) => {
-    toast(msg);
-  };
 
   const handleRemoveBook = () => {
     dispatch(deleteBook(id));
