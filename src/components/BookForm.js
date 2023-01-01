@@ -9,6 +9,10 @@ const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
+  const [errorTitle, setErrorTitle] = useState(null);
+  const [errorAuthor, setErrorAuthor] = useState(null);
+  const [errorCategory, setErrorCategory] = useState(null);
+
   const dispatch = useDispatch();
 
   const { deletedError } = useSelector((state) => state.books);
@@ -25,12 +29,37 @@ const BookForm = () => {
     setAuthor('');
     setCategory('');
   };
+  const isValid = (title, author, category) => {
+    let validStatus = true;
+    if (title.length === 0) {
+      setErrorTitle('Title field is required');
+      validStatus = false;
+    }
+    if (author.length === 0) {
+      setErrorAuthor('Author field is required');
+      validStatus = false;
+    }
+
+    if (category.length === 0) {
+      setErrorCategory('Category field is required');
+      validStatus = false;
+    }
+
+    return validStatus;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const mTitle = title.trim();
+    const mAuthor = author.trim();
+
+    if (!isValid(mTitle, mAuthor, category)) {
+      return;
+    }
+
     dispatch(createBook({
-      item_id: uuidv4(), title, author, category,
+      item_id: uuidv4(), title: mTitle, author: mAuthor, category,
     }));
     resetForm();
   };
@@ -53,6 +82,7 @@ const BookForm = () => {
             placeholder="Book Title"
             required
           />
+          {errorTitle && <span className="text-red-700">*{errorTitle}*</span>}
         </label>
         <label
           htmlFor="author"
@@ -67,6 +97,7 @@ const BookForm = () => {
             placeholder="Book Author"
             required
           />
+           {errorAuthor && <span className="text-red-700">*{errorAuthor}*</span>}
         </label>
         <label
           htmlFor="category"
@@ -121,6 +152,7 @@ const BookForm = () => {
               Historical fiction
             </option>
           </select>
+          {errorCategory && <span className="text-red-700">*{errorCategory}*</span>}
         </label>
         <button type="submit" className="text-dirty-white app-bg-primary rounded w-fit font-light font-roboto px-12 py-3 text-base font-bold">ADD BOOK</button>
       </div>
