@@ -1,15 +1,15 @@
 import { ToastContainer } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import BookForm from '../components/BookForm';
-import BookList from '../components/BookList';
 import 'react-toastify/dist/ReactToastify.css';
+import BooksContainer from '../components/BooksContainer';
 
 const BookPage = () => {
   const { loading, error } = useSelector((state) => state.books);
   return (
     <div className='book-page'>
       <ToastContainer />
-      <BookList />
+      <BooksContainer />
      {!loading && !error && <BookForm />}
     </div>
 
